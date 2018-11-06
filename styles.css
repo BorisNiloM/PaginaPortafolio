@@ -72,6 +72,7 @@
     display: grid;
     grid-template-areas: "logo links";
     position: fixed;
+    z-index: 1;
 }
 
 .logo {
@@ -149,8 +150,9 @@ iframe {
 
 .hfoo {
     grid-area: Hfoo;
-    justify-self: center;
-    align-self: center;
+    justify-self: start;
+    align-self: end;
+    margin-left: 50px;
     font-size: 25px;
 }
 
@@ -176,12 +178,13 @@ iframe {
 
 .ffoo {
     grid-area: derecho;
-    justify-self: center;
+    justify-self: end;
+    margin-right: 50px;
 }
 
 @media (max-width:415px) {
     .item1 {
-        height: 22%;
+        height: 28%;
     }
     #navbar {
         grid-template-areas: "logo" "links";
@@ -196,7 +199,7 @@ iframe {
         display: block;
     }
     #welcome-section h1 {
-        margin-top: 50%;
+        margin-top: 60%;
     }
     .item3 {
         grid-template-areas: "titulo " "pag1" "pag2" "pag3" "pag4";
@@ -212,12 +215,13 @@ iframe {
     }
     .item4 {
         height: 200px;
-        grid-template-areas: "Hfoo" "red1 red2" "derecho";
+        grid-template-areas: "Hfoo Hfoo" "red1 red2" "derecho derecho";
         padding-bottom:
     }
     .hfoo {
-        grid-area: Hfoo;
-        justify-self: center;
+        font-size: 20px;
+    }
+    .ffoo {
         font-size: 20px;
     }
 }
